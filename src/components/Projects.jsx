@@ -8,8 +8,8 @@ const Projects = () => {
       title: "OASIS Infobyte Internship",
       description: "Data Science Internship focusing on machine learning and data analysis projects.",
       technologies: ["Python", "Machine Learning", "NLP", "Data Analysis", "Logistic Regression", "TF-IDF", "Seaborn", "Plotly"],
-      github: "https://github.com/MurthyMoulishwaran/OASIS-INFOBYTE",
-      live: "https://github.com/MurthyMoulishwaran/OASIS-INFOBYTE",
+      github: "https://www.linkedin.com/posts/m-moulishwaran-321841248_oasis-infobyte-internship-in-data-science-activity-7128032704155041792-7sIa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1ZLIkB5Rdt3glezVP1JsCd_YaH3ZhbeVE",
+      live: "https://www.linkedin.com/posts/m-moulishwaran-321841248_oasis-infobyte-internship-in-data-science-activity-7128032704155041792-7sIa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1ZLIkB5Rdt3glezVP1JsCd_YaH3ZhbeVE",
       image: "https://raw.githubusercontent.com/MurthyMoulishwaran/moulishwaran-portfolio/main/src/assets/oasis.png",
       details: [
         "Iris Classification: Achieved 98% accuracy in classifying Iris species with Logistic Regression and EDA.",
