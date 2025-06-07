@@ -1,126 +1,135 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-export function Projects() {
+const Projects = () => {
   const projects = [
     {
-      title: "Gold Price Prediction",
-      description: "Developed a machine learning model using Random Forest Regression to predict gold prices based on financial indicators. Achieved an R² score of 98% and implemented a Tkinter-based GUI.",
-      tools: "Python, Scikit-Learn, Pandas, Tkinter",
-      link: "https://github.com/MurthyMoulishwaran/Gold-Price-Prediction",
-      image: "/projects/gold-price.jpg"
+      title: "OASIS Infobyte Internship",
+      description: "Data Science Internship focusing on machine learning and data analysis projects.",
+      technologies: ["Python", "Machine Learning", "NLP", "Data Analysis", "Logistic Regression", "TF-IDF", "Seaborn", "Plotly"],
+      github: "https://github.com/MurthyMoulishwaran/OASIS-INFOBYTE",
+      live: "https://github.com/MurthyMoulishwaran/OASIS-INFOBYTE",
+      image: "https://raw.githubusercontent.com/MurthyMoulishwaran/moulishwaran-portfolio/main/src/assets/oasis.png",
+      details: [
+        "Iris Classification: Achieved 98% accuracy in classifying Iris species with Logistic Regression and EDA.",
+        "Spam Detection: Built an NLP model with 96% accuracy for spam classification using TF-IDF and Logistic Regression.",
+        "Unemployment Analysis: Analyzed unemployment trends in India, visualized patterns with Seaborn and Plotly."
+      ]
     },
     {
-      title: "Number Plate Detection System",
-      description: "Built a real-time system using Python, OpenCV, EasyOCR, and Tkinter to detect and extract vehicle number plates from IP camera feeds.",
-      tools: "OpenCV, EasyOCR, Tkinter",
-      link: "",
-      image: "/projects/number-plate.jpg"
+      title: "AI-Powered Resume Builder",
+      description: "An intelligent resume builder that uses AI to suggest improvements and optimize content.",
+      technologies: ["React", "Node.js", "OpenAI API", "Tailwind CSS", "Express"],
+      github: "https://github.com/MurthyMoulishwaran/AI-Resume-Builder",
+      live: "https://ai-resume-builder-moulishwaran.vercel.app/",
+      image: "https://raw.githubusercontent.com/MurthyMoulishwaran/moulishwaran-portfolio/main/src/assets/resume-builder.png",
+      details: [
+        "Integrated OpenAI API for intelligent content suggestions",
+        "Real-time resume preview with professional templates",
+        "AI-powered content optimization and improvement suggestions"
+      ]
     },
     {
-      title: "PDF & Image Text Extraction App",
-      description: "Streamlit app for extracting text from PDFs/images using Tesseract, with real-time spelling correction and PostgreSQL integration.",
-      tools: "Python, Streamlit, Tesseract, SymSpell, PostgreSQL",
-      link: "https://www.linkedin.com/posts/m-moulishwaran-321841248_ocr-streamlit-postgresql-activity-7324336259907145728-qvTB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1ZLIkB5Rdt3glezVP1JsCd_YaH3ZhbeVE",
-      image: "/projects/text-extraction.jpg"
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce platform with user authentication and payment integration.",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+      github: "https://github.com/MurthyMoulishwaran/E-Commerce-Platform",
+      live: "https://e-commerce-platform-moulishwaran.vercel.app/",
+      image: "https://raw.githubusercontent.com/MurthyMoulishwaran/moulishwaran-portfolio/main/src/assets/ecommerce.png",
+      details: [
+        "Secure user authentication and authorization",
+        "Shopping cart functionality with Redux state management",
+        "Stripe payment integration for secure transactions"
+      ]
     },
     {
-      title: "Legal Document Analyzer",
-      description: "Developed a legal document analyzer using OCR, SymSpell, and DeepSeek LLM for extracting insights and supporting chatbot-based legal queries.",
-      tools: "Streamlit, OpenRouter, DeepSeek, SymSpell",
-      link: "https://www.linkedin.com/posts/m-moulishwaran-321841248_ai-legaltech-machinelearning-activity-7317878579109736449-Z8OA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1ZLIkB5Rdt3glezVP1JsCd_YaH3ZhbeVE",
-      image: "/projects/legal-analyzer.jpg"
-    },
-    {
-      title: "Entertainment Industry Analysis",
-      description: "Created Tableau dashboards analyzing movie budgets, ratings, genre trends, and audience preferences to support decision-making.",
-      tools: "Tableau",
-      link: "",
-      image: "/projects/entertainment.jpg"
-    },
+      title: "Task Management App",
+      description: "A collaborative task management application with real-time updates.",
+      technologies: ["React", "Firebase", "Material-UI", "Redux"],
+      github: "https://github.com/MurthyMoulishwaran/Task-Management-App",
+      live: "https://task-management-app-moulishwaran.vercel.app/",
+      image: "https://raw.githubusercontent.com/MurthyMoulishwaran/moulishwaran-portfolio/main/src/assets/task-manager.png",
+      details: [
+        "Real-time task updates using Firebase",
+        "User authentication and task sharing",
+        "Responsive design with Material-UI components"
+      ]
+    }
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+    <section id="projects" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.h2 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto"></div>
-          <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore my portfolio of data science and machine learning projects
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          Projects
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-700"
+              className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="relative h-48 bg-gray-700">
-                <img
-                  src={project.image}
+              <div className="relative">
+                <img 
+                  src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = `https://via.placeholder.com/800x400?text=${encodeURIComponent(project.title)}`;
-                  }}
+                  className="w-full h-48 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                <h3 className="absolute bottom-4 left-4 text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex space-x-4">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      <FaGithub size={24} />
+                    </a>
+                    <a 
+                      href={project.live} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-blue-400 transition-colors duration-300"
+                    >
+                      <FaExternalLinkAlt size={24} />
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="p-6">
-                <p className="text-gray-300 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tools.split(", ").map((tool, i) => (
-                    <span
-                      key={i}
-                      className="bg-purple-900/50 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-700"
+                  {project.technologies.map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
                     >
-                      {tool}
+                      {tech}
                     </span>
                   ))}
                 </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                  >
-                    View Project
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
+                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                  {project.details.map((detail, detailIndex) => (
+                    <li key={detailIndex}>{detail}</li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-} 
+};
+
+export default Projects; 
